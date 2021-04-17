@@ -1,0 +1,27 @@
+# Created by @author
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Dependency directories
+#node_modules/
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env.test
+
+# Folders ignored
+.idea/
+src/
+dist/
+package-lock.json
