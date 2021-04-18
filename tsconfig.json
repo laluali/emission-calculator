@@ -11,10 +11,11 @@
     "skipLibCheck": false,
     "resolveJsonModule": true,
     "lib": [
-      "ES6"
+      "ES6", "DOM"
     ]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "spec"
   ]
 }
