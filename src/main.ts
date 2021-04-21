@@ -17,8 +17,9 @@ class Main {
 }
 
 (function(){
-    console.log('hit!');
-    let x = new Main(process.argv.splice(2));
+    console.log('hit!!!');
+    // @ts-ignore
+    let x = new Main(JSON.parse(process.env.npm_config_argv)['original'].slice(2));
 })()
 
 exports.test = function() {

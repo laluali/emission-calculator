@@ -7,8 +7,8 @@
     "test": "jasmine-ts --config=jasmine.json",
     "b": "tsc",
     "test-app": "node -e 'require(\"./dist/main.js\").test()'",
-    "c": "node -e 'require(\"./dist/main.js\").calculator()'",
-    "d": "node dist/main.js",
+    "c": "tsc; node -e 'require(\"./dist/main.js\").calculator()'",
+    "d": "tsc; node dist/main.js",
     "start:dev": "nodemon"
   },
   "keywords": [
@@ -31,6 +31,7 @@
   "dependencies": {
     "@types/node": "^14.14.41",
     "chalk": "^4.1.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "yargs": "^16.2.0"
   }
 }

@@ -21,8 +21,9 @@ var Main = /** @class */ (function () {
     return Main;
 }());
 (function () {
-    console.log('hit!');
-    var x = new Main(process.argv.splice(2));
+    console.log('hit!!!');
+    // @ts-ignore
+    var x = new Main(JSON.parse(process.env.npm_config_argv)['original'].slice(2));
 })();
 exports.test = function () {
     console.log(process.argv.slice(2));

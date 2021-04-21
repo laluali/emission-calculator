@@ -32,19 +32,24 @@ export class HttpService{
             searchParams.set('api_key', AppConstant.apiKey);
             options.url.search = this.formSearchParams(searchParams).toString();
         }
-        console.log(options);
-        return options.url.href;
+        options.headers = {
+            'Accept': 'application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8'
+        }
+        // console.log(options);
+        return options;
     }
 
     get(options: ReqOptionsModel, searchParams?: Map<string, any>) : Promise<any> {
         return new Promise<any>((resolve, reject)=>{
             let reqOptions = this.formRequest(options, searchParams);
+            console.log(reqOptions)
             const req = https.request(reqOptions, (res) => {
                 console.log('statusCode:', res.statusCode);
 
                 res.on('data', (d) => {
-                    process.stdout.write(d);
-                    console.log(JSON.parse(d));
+                    /*process.stdout.write(d);
+                    console.log(JSON.parse(d));*/
+                    debugger;
                     return resolve(JSON.parse(d));
                 });
             });
